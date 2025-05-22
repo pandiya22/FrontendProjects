@@ -1,0 +1,12 @@
+#head1,#h2,#head2,#heading,#h3,#heading2{
+    color:white;
+}
+.center{
+    border:2px solid brown;
+    
+}
+.head{
+    border-radius: 25px;
+    border:2px solid white;
+    background-color: brown;
+}
