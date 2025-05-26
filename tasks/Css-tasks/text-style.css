@@ -1,0 +1,183 @@
+.para{
+   font-family:tahoma;
+   font-weight: bold;
+   font-size:25px;
+}
+.para1{
+    font-family: Verdana;
+    font-weight:bold;
+    font-size:15px;
+    margin:0;
+}
+.para2{
+    font-family:verdana;
+    font-size:14px;
+    margin:0;
+    color:grey;
+    font-weight: 100px;
+}
+.para3{
+    font-family:verdana;
+    font-weight:100px;
+    width:280px;
+}
+.center{
+    border-radius:5px;
+    background-color:#3bb143;
+    font-weight:100px;
+    font-size:15px;
+    font-family:verdana;
+    color:white;
+    width:150px;
+    height:40px;
+    border:none;
+    cursor:pointer;
+
+}
+.para4{
+    font-family:Arial;
+    font-weight:bold;
+    font-size:25px;
+    margin:0;
+}
+.para5{
+    color:#f94449;
+    margin:0;;
+    font-weight:bold;
+    font-size:16px;
+    font-family:Arial;
+    margin-bottom:10px;
+}
+.shopping{
+    font-family: Arial;
+    font-weight:bold;
+    font-size:20px;
+    text-align: center;
+    
+}
+.para6{
+    font-family: Arial;
+    font-weight:bold;
+    font-size:14px;
+    text-align:center
+
+
+}
+.learn{
+    font-family:Arial;
+    font-weight:bold;
+    color:rgb(76, 76, 226);
+    text-align: center;
+    font-size: 14px;
+}
+.learn:hover{
+    cursor:pointer;
+    text-decoration: underline;
+}
+.new{
+    font-family:Arial;
+    font-weight:bold;
+    text-align: center;
+    color:orangered;
+    margin:2px;
+}
+.Macbook{
+    font-family:Arial;
+    font-weight:bold;
+    font-size:20px;
+    text-align: center;
+    margin: 2px;
+}
+.pro{
+    font-family: Arial;
+    font-weight:bold;
+    font-size:35px;
+    text-align: center;
+    margin:2px;
+}
+.from{
+    font-family: Arial;
+    font-weight: 120px;
+    font-size: 14px;
+    text-align: center;
+}
+.buy{
+    font-family:arial;
+    font-weight: bold;
+    color:white;
+    background-color: #023E8A;
+    border:none;
+    border-radius: 15px;
+    text-align: center;
+    padding:10px 10px;
+    cursor:pointer;
+    width:50px;
+
+}
+.free{
+    font-family:verdana;
+    font-weight:bold;
+    font-size:16px;
+
+}
+#code{
+    color:rgb(117, 112, 112);
+    font-size:16px;
+    font-family: verdana;
+    font-weight:normal;
+    
+    
+
+
+}
+.para7{
+    font-family: verdana;
+    font-weight:normal;
+    font-size:16px;
+    margin-top:10px;
+    width:570px;
+    
+}
+.para8{
+    font-family: verdana;
+    font-weight:normal;
+    font-size:16px;
+}
+#it{
+    color:rgb(13, 150, 143)
+}
+.usd{
+    font-family: verdana;
+    font-weight:normal;
+    font-size:23px;
+    margin: 2px;
+}
+#price{
+    font-family: verdana;
+    font-weight:normal;
+    font-size:14px;
+    color:rgb(108, 107, 107);
+    margin:0;
+}
+.para9{
+    font-family: verdana;
+    font-weight:normal;
+    font-size:12px;
+    color:green;
+    
+    
+}
+.para10{
+    font-family: verdana;
+    font-weight:normal;
+    font-size:12px;
+    color:rgb(91, 91, 91)
+}
+#red{
+    font-family: verdana;
+    font-weight:normal;
+    font-size:12px;
+    color:red
+}
+
+
