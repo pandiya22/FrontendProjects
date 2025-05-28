@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grid Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "main sidebar"
+        "twin1 twin2"
+        "footer footer";
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: auto;
+      gap: 10px;
+      padding: 10px;
+      border:1px solid grey;
+      width:1000px;
+    }
+
+    .header {
+      grid-area: header;
+      background: #66ccff;
+      padding: 20px;
+      text-align: left;
+      width:970px;
+
+      
+    }
+
+    .main-content {
+      grid-area: main;
+      background: #66cc33;
+      padding: 20px;
+      text-align: center;
+    
+      grid-column:span sidebar;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      background: #cc66ff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .twin1 {
+      grid-area: twin1;
+      background: #ff9900;
+      padding: 20px;
+      text-align: center;
+      height:180px;
+    }
+
+    .twin2 {
+      grid-area: twin2;
+      background: #ff9900;
+      padding: 20px;
+      text-align: center;
+      height:180px;
+    }
+
+    .footer {
+      grid-area: footer;
+      background: #0066cc;
+      padding: 20px;
+      text-align: left;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+    <center>
+
+  <div class="container">
+    <div class="header">.header</div>
+    <div class="main-content">.main-content</div>
+    <div class="sidebar">.sidebar</div>
+    <div class="twin1">.twin</div>
+    <div class="twin2">.twin</div>
+    <div class="footer">.footer</div>
+  </div>
+  </center>
+
+</body>
+</html>
