@@ -9,12 +9,16 @@
       font-family: sans-serif;
       background-color: #f0f6f7;
     }
+    *{
+      font-family: verdana;
+    }
 
     header {
       text-align: center;
       padding: 20px;
       background-color: white;
       font-weight: bold;
+      box-shadow: 5px 5px 5px gray;
     }
 
     .container {
@@ -27,7 +31,7 @@
     .sidebar {
       background-color: white;
       padding: 20px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      box-shadow: 5px 5px 5px gray;
     }
 
     .sidebar ul {
@@ -41,18 +45,17 @@
 
     .content {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 20px;
+      grid-template-rows: repeat(2,1fr);
     }
 
     .card {
       background-color: white;
       padding: 20px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      box-shadow: 5px 5px 5px gray;
       display: grid;
-      grid-template-rows: auto 1fr auto;
-      height: 200px;
-      
+      height: 400px;
     }
 
     .card h3 {
@@ -69,6 +72,7 @@
       color: black;
       margin-top: 10px;
       align-self: end;
+      cursor:pointer;
     }
   </style>
 </head>
@@ -78,56 +82,55 @@
 
   <div class="container">
     <nav class="sidebar">
-        <h5>Navigation</h5>
+      <h3>Navigation:</h3>
       <ul>
         <li>Nav Link 1</li>
         <li>Nav Link 2</li>
         <li>Nav Link 3</li>
         <li>Nav Link 4</li>
         <li>Nav Link 5</li>
-        <li>Nav Link 6</li>
       </ul>
     </nav>
 
     <main class="content">
       <div class="card">
         <h3>Heading</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nisi nostrum illum a architecto! Tempora, mollitia molestias. Vero, labore modi illum voluptas voluptate, quae accusamus impedit eum nesciunt itaque dolorum.</p>
         <div class="read-more">read more »</div>
       </div>
       <div class="card">
         <h3>Heading</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non suscipit nostrum quod debitis, fugiat maxime repudiandae porro aliquid, corrupti vel incidunt magni quos sunt eveniet dolor qui totam earum similique.</p>
         <div class="read-more">read more »</div>
       </div>
       <div class="card">
         <h3>Heading</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus est magni inventore, eaque blanditiis provident ipsa perspiciatis at officiis, officia deserunt laudantium accusantium earum totam praesentium illo ab consequatur similique.</p>
         <div class="read-more">read more »</div>
       </div>
       <div class="card">
         <h3>Heading</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In, aspernatur. Consequatur eaque quibusdam quia sint quas cum commodi vitae alias voluptatibus optio temporibus, ut iure dolorum sed, aspernatur obcaecati nihil!.</p>
         <div class="read-more">read more »</div>
       </div>
       <div class="card">
         <h3>Heading</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quis neque rerum tenetur, odit eum commodi non adipisci consequatur natus voluptatum assumenda impedit sunt nostrum ad debitis repudiandae. Quaerat, nihil?</p>
         <div class="read-more">read more »</div>
       </div>
       <div class="card">
         <h3>Heading</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti corporis rem excepturi porro fugiat sequi cum quos adipisci. Aspernatur adipisci doloribus obcaecati officia nostrum. Architecto beatae porro numquam voluptatum natus.</p>
         <div class="read-more">read more »</div>
       </div>
       <div class="card">
         <h3>Heading</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis.</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam libero odit nemo inventore alias tempore! Minima inventore aliquid impedit suscipit accusantium reprehenderit illum, modi debitis tempora velit provident repellendus voluptatum. </p>
         <div class="read-more">read more »</div>
       </div>
       <div class="card">
         <h3>Heading</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt enim ad, animi aliquid eveniet nostrum iure soluta hic excepturi? Doloremque distinctio in ea quos, quod reprehenderit saepe dolore beatae excepturi.</p>
         <div class="read-more">read more »</div>
       </div>
     </main>

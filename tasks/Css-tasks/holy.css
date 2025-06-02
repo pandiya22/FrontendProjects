@@ -11,10 +11,17 @@ ul,li{
 h1,h2,h3{
     color:black;
 }
+#frog{
+    text-align: center;
+
+}
+
 p{
     color:#828b8a;
 }
 .container{
     display:grid;
     margin:20px auto;
+    grid-template-columns: repeat(3,1fr);
+    
 }

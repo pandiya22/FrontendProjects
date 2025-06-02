@@ -5,70 +5,91 @@
   <title>Color Grid Layout</title>
   <style>
     body {
-      margin: 0;
-      background-color: #2684e2; /* Blue background */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+  font-family: sans-serif;
+  background-color: #2a7bd2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px;
+}
 
-    .outer-container {
-      background-color: #f3d9b1; /* Light skin color */
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    }
+.bigdiv {
+  background-color: #fce1c8;
+  padding: 20px;
+  border: 2px solid #f19999;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
 
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(3, 80px);
-      grid-auto-rows: 80px;
-      gap: 10px;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 100px;
+  gap: 10px;
+  height: 500px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 
-    .box {
-      border-radius: 5px;
-    }
+.box {
+  border-radius: 5px;
+ 
+}
 
-    .b1 {
-       background-color: #006d77;
-     }       
-    .b2 {
-       background-color: #ffb703; 
-    }      
-    .b3 { background-color: #264653;
-     }       
-    .b4 { background-color: #ff006e; 
-    }       
-    .b5 { background-color: #a8dadc;
-     }     
-    .b6 { background-color: #00b4d8;
-     }     
-    .b7 {
-      background-color: #fb8500;             
-      grid-column: 1 / span 1;
-      grid-row: 3 / span 2;
-    }
-    .b8 {
-      background-color: #ff006e;             
-      grid-column: 2 / span 2;
-      grid-row: 3 / span 2;
-    }
+.small {
+  grid-row: span 1;
+  grid-column: span 1;
+}
+
+.large {
+  grid-row: span 2;
+  grid-column: span 1;
+}
+
+.tall {
+  grid-row: span 2;
+}
+
+.big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.teal {
+  background-color: #117a8b;
+}
+
+.orange {
+  background-color: #f4a300;
+}
+
+.pink {
+  background-color: #f72585;
+}
+
+.cyan {
+  background-color: #3edbd3;
+}
+.hold{
+     height: 180px;
+}
   </style>
 </head>
 <body>
-
-  <div class="outer-container">
-    <div class="grid-container">
-      <div class="box b1"></div>
-      <div class="box b2"></div>
-      <div class="box b3"></div>
-      <div class="box b4"></div>
-      <div class="box b5"></div>
-      <div class="box b6"></div>
-      <div class="box b7"></div>
-      <div class="box b8"></div>
+  <div class="bigdiv">
+    <div class="grid">
+      <div class="box teal large"></div>
+      <div class="box orange small"></div>
+      <div class="box teal small"></div>
+      <div class="box pink small"></div>
+      <div class="box cyan tall"></div>
+      <div class="box cyan small"></div>
+      <div class="box teal small "></div>
+      <div class="box orange tall hold"></div>
+      <div class="box pink big hold"></div>
     </div>
   </div>
 
