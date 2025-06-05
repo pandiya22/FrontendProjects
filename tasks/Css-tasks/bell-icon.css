@@ -1,0 +1,46 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .center-screen {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .center-screen img {
+      width: 40px;
+      height: 40px;
+      opacity: 0.45;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1e1e2f;
+      padding: 10px 20px;
+      color: white;
+    }
+
+    .navbar .site-name {
+      font-weight: bold;
+    }
+
+    .navbar .icon img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .content {
+      height: 80vh;
+      background-color: #f0f0f0;
+    }
