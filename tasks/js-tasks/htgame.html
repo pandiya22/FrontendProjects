@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Coin</title>
+    <link rel="stylesheet" href="./htgame.css">
+</head>
+<body>
+    <center>
+    <h2>Flip Coin Game</h2>
+    
+    <h5>Game starts now...</h5>
+    
+    <button onclick="
+    let random=Math.floor(Math.random(head,tail));
+    let computermove=Math.floor(Math.random(head,tail));
+    if(random===computermove){
+        alert('you picked head.computer picked head.you win!!');
+        
+    }
+    else if(random===computermove){
+        alert('you picked tail.computer picked head.you lose!!');
+    }
+
+    ">flip the coin</button>
+    </center>
+</body>
+</html>
