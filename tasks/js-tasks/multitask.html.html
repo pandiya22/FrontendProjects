@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multi tasks</title>
+   <link rel="stylesheet" href="./multitask.css">
+</head>
+<body>
+<center>
+  
+  <div class="box">
+    <h3>1. Head or Tails</h3>
+    <button onclick="flipCoin()">Flip</button>
+    <div id="coinResult" class="output"></div>
+  </div>
+
+  
+  <div class="box">
+    <h3>2. Welcome Message</h3>
+    <input type="text" id="nameInput" placeholder="Enter your name" oninput="showWelcome()">
+    <div id="welcomeMsg" class="output"></div>
+  </div>
+
+  
+  <div class="box">
+    <h3>3. Live Search Display</h3>
+    <input type="text" id="searchInput" placeholder="Type to search..." oninput="showSearch()">
+    <div id="searchOutput" class="output"></div>
+  </div>
+
+  
+  <div class="box">
+    <h3>4. Counter</h3>
+    <div id="counterValue" class="output">Value: 0</div>
+    <button onclick="changeCount(1)">+ Increase</button>
+    <button onclick="changeCount(-1)">- Decrease</button>
+    <button onclick="resetCount()">Reset</button>
+  </div>
+  </center>
+</body>
+  <script src="./multitask.js"> </script>
+
+</html>

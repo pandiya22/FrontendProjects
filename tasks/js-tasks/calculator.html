@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color: rgb(85, 234, 85);
+            border-radius:5px;
+            cursor:pointer;
+            border:none;
+            font-family: arial;
+            font-weight: normal;
+            height:30px;
+            color: white;
+        }
+        .result{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="$" class="js-input">
+    <button class="js-btn" onclick="calculateshipping()">Calculate</button>
+    <div>
+    <p ></p>
+    </div>
+</body>
+<script>
+     function calculateshipping(){
+        let value=document.querySelector(".js-input").value;
+        console.log(value);
+        let result=document.querySelector("p");
+        
+        if(value<=0){
+            result.innerHTML="Error:$ not take less than 0";
+             result.classList.add("result");
+
+        }
+        else{
+            result.classList.remove("result");
+        }
+     }
+</script>
+</html>

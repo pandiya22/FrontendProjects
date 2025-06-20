@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            padding:8px;
+            border-radius: 15px;
+            width:150px;
+            margin:5px;
+        }
+        .btn-1{
+            background-color: black;
+            color: white;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="gaming()" class="button1">Gaming</button>
+    <button onclick="tech()" class="button2">Tech</button>
+    <button onclick="music()" class="button3">Music</button>
+    
+</body>
+<script>
+    let buttonelement=document.querySelector(".button1");
+    function gaming(){
+        if(buttonelement.innerText=="Gaming"){
+            buttonelement.innerText="Gamings";
+            buttonelement.classList.add("btn-1");
+        }
+        else{
+            buttonelement.innerText="Gaming";
+            buttonelement.classList.remove("btn-1");
+        }
+        
+
+    }
+     let buttonelement2=document.querySelector(".button2");
+    function tech(){
+        if(buttonelement2.innerText=="Tech"){
+            buttonelement2.innerText="Techs";
+            buttonelement2.classList.add("btn-1");
+        }
+        else{
+            buttonelement2.innerText="Tech";
+            buttonelement2.classList.remove("btn-1");
+        }
+        
+
+    }
+     let buttonelement3=document.querySelector(".button3");
+    function music(){
+        if(buttonelement3.innerText=="Music"){
+            buttonelement3.innerText="Musical";
+            buttonelement3.classList.add("btn-1");
+        }
+        else{
+            buttonelement3.innerText="Music";
+            buttonelement3.classList.remove("btn-1");
+        }
+        
+
+    }
+</script>
+</html>

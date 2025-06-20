@@ -1,0 +1,23 @@
+body{
+    margin:0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/010/223/862/non_2x/hexagon-technology-with-dark-blue-background-abstract-futuristic-illustration-design-high-tech-digital-social-network-connect-concept-free-vector.jpg);
+    
+}
+.container{
+    height:5000px;
+    width:1000px;
+    border:2px solid black;
+    border-radius: 10px;
+    background-color:black;
+    color: white;
+}
+.container-2{
+    height:800px;
+    width:1000px;
+    border:2px solid black;
+    border-radius: 10px;
+    background-color:black;
+    color: white;
+}
