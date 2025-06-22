@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Timer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 150px;
+            margin: 10%;
+            border: 1rem solid beige;
+            border-radius: 50%;
+            font-size: x-large;
+            font-weight: 700;
+            border-top: 1rem solid rgb(56, 54, 54);
+            animation-name: rotate;
+            animation-duration: 2s ;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+        }
+        @keyframes rotate{ 
+            from{
+                transform:rotate(0deg) ;
+            }
+            to{
+                transform: rotate(360deg);
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="Timer"><p class="count"></p></div>
+</body>
+<script>
+    let a = 15;
+setInterval(function() {
+    document.querySelector('.count').innerText = a;
+    a--;
+    if (a < 0) a = 0;
+}, 1000);
+</script>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--getElementbyid-->
+   <button id="js-follow-btn" onclick="valid()">Follow</button> 
+   <!--getElementbyclass-->
+   <button class="js-follow-btn" onclick="valclass()">Follow</button>
+   <!--Element setAttribute-->
+   <img>  
+   <!--Element getAttribute--> 
+   <img>
+</body>
+<script>
+    //GetElementbyId
+    function valid(){
+    let value=document.querySelector('#js-follow-btn');
+    if(value.innerText==="Follow"){
+        value.innerText="followed";
+    }
+    else{
+        value.innerText="unfollow";
+    }
+    
+}
+//GetElementbyclass
+function valclass(){
+    let value=document.querySelector('.js-follow-btn');
+    if(value.innerText==="Follow"){
+        value.innerText="followed";
+    }
+    else{
+        value.innerText="unfollow";
+    }
+    
+}
+//element set attribute
+let value=document.img.setAttribute("src","../Practice-images/Desktop.jpg");
+//element get attribute
+let value1=document.img.getAttribute("src","../Practice-images/Desktop.jpg");
+//element create
+let element=document.createElement("h1");
+element.innerText="Hi Welcome All!!";
+
+
+
+</script>
+</html>

@@ -16,6 +16,16 @@
             color: white;
             cursor:pointer;
         }
+        .btn-2{
+            background-color: black;
+            color: white;
+            cursor:pointer;
+        }
+        .btn-3{
+            background-color: black;
+            color: white;
+            cursor:pointer;
+        }
     </style>
 </head>
 <body>
@@ -30,39 +40,53 @@
         if(buttonelement.innerText=="Gaming"){
             buttonelement.innerText="Gamings";
             buttonelement.classList.add("btn-1");
+            buttonelement2.classList.remove("btn-1");
         }
         else{
             buttonelement.innerText="Gaming";
             buttonelement.classList.remove("btn-1");
+            remove.tech();
+            remove.music();
         }
         
 
     }
+    
      let buttonelement2=document.querySelector(".button2");
     function tech(){
         if(buttonelement2.innerText=="Tech"){
             buttonelement2.innerText="Techs";
-            buttonelement2.classList.add("btn-1");
+            buttonelement2.classList.add("btn-2");
+        
+            
         }
         else{
             buttonelement2.innerText="Tech";
-            buttonelement2.classList.remove("btn-1");
-        }
-        
+            buttonelement2.classList.remove("btn-2");
+            remove.gaming();
+            remove.music();
 
+        }
+
+        
     }
+    
      let buttonelement3=document.querySelector(".button3");
     function music(){
         if(buttonelement3.innerText=="Music"){
             buttonelement3.innerText="Musical";
-            buttonelement3.classList.add("btn-1");
+            buttonelement3.classList.add("btn-3");
+            buttonelement2.classList.remove("btn-3");
         }
         else{
             buttonelement3.innerText="Music";
-            buttonelement3.classList.remove("btn-1");
+            buttonelement3.classList.remove("btn-3");
+            remove.gaming();
+            remove.tech();
         }
         
 
     }
+    
 </script>
 </html>
