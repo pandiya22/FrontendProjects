@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #js-btn{
+            background-color: yellow;
+            width:200px;
+            height:70px;
+            color:black;
+            margin:50px auto;
+
+        }
+        #js-btn:hover{
+            cursor:pointer;
+            background-color: black;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <button id="js-btn" onclick="imagebutton()">Get Dog Image</button>
+    <div id="div-btn"></div>
+</body>
+<script>
+    const url="https://dog.ceo/api/breeds/image/random";
+    let buttonElement=document.getElementById("js-btn");
+    let divElement=document.getElementById("div-btn");
+    function imagebutton(){
+    fetch(url).then(response=>response.json())
+    .then(json=>divElement.innerHTML=`<img src="${json.message}" style="width:300px; height:300px;">`);
+    }
+
+
+
+</script>
+</html>
