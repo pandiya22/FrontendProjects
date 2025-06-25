@@ -8,13 +8,12 @@ body{
     background-repeat: no-repeat;
 }
 .container{
-    height:5000px;
+    height:7000px;
     width:1000px;
     border:2px solid black;
     border-radius: 10px;
     background-image: url(https://i.pinimg.com/736x/cf/42/2b/cf422b28fcd7ef77ea795a3df6e93db7.jpg);
-    color: white;
-    background-position: t;
+    background-position: center;
     background-attachment: fixed;
     background-repeat: repeat;
     
@@ -24,6 +23,11 @@ body{
     width:1000px;
     border:2px solid black;
     border-radius: 10px;
-    background-color:black;
-    color: white;
+    background-image: url(https://i.pinimg.com/736x/cf/42/2b/cf422b28fcd7ef77ea795a3df6e93db7.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+h1{
+    color:white;
 }
