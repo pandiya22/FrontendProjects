@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class Bank{
+        constructor(){
+            this.initialAmount=10000;
+        }
+        withdraw(withdrawAmount){
+             this.initialAmount=this.initialAmount-withdrawAmount;
+             console.log( `Withdraw amount is :${this.initialAmount}`);
+        }
+        deposit(depositAmount){
+           this.initialAmount=this.initialAmount+depositAmount;
+           console.log( `Total amount after deposit :${this.initialAmount}`);
+        }
+    }
+    const mybank=new Bank();
+    mybank.withdraw(2000);
+    mybank.deposit(1000);
+</script>
+</html>

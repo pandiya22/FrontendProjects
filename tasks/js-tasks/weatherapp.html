@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="./weatherapp.css" />
+</head>
+<body>
+  <h1><span style="color: orange">Weather</span></h1>
+  <input type="text" id="cityInput" placeholder="Enter city name" />
+  <br />
+  <button onclick="fetchWeather()">Search</button><br>
+  <div id="result"></div>
+</body>
+<script>
+    async function fetchWeather() {
+      const city = document.getElementById("cityInput").value.trim();
+      if (!city) {
+        document.getElementById("result").innerText = "Please enter a city name.";
+        return;
+      }
+
+      const url = `https://openweather43.p.rapidapi.com/weather?appid=da0f9c8d90bde7e619c3ec47766a42f4&q=${city}&units=standard`;
+
+      const options = {
+        method: "GET",
+        headers: {
+          "x-rapidapi-key": "306fc9b745msh2e317c7df8b4b0cp1aea2bjsnf98841ab2a2e",
+          "x-rapidapi-host": "openweather43.p.rapidapi.com",
+        },
+      };
+
+      try {
+        const response = await fetch(url, options);
+        const result = await response.json();
+
+        if (result.name) {
+          document.getElementById("result").innerHTML = `
+            <h2>${result.name}</h2>
+            <p>${result.weather[0].main}</p>
+            <p><strong>Temp:</strong>${result.main.temp}°</p>
+            <p><strong>min Temp:</strong> ${result.main.temp_min}°</p>
+            <p><strong>max Temp:</strong> ${result.main.temp_min}°</p>
+          `;
+        } else {
+          document.getElementById("result").innerText = "City not found or error in data.";
+        }
+      } catch (error) {
+        console.error(error);
+        document.getElementById("result").innerText = "Error fetching data.";
+      }
+    }
+</script>
+</html>
+  
