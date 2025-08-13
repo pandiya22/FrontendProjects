@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Quiz</title>
+  <link rel="stylesheet" href="./Quiz-app.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">QuizApp</div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Quizzes</a></li>
+        <li><a href="#">Leaderboard</a></li>
+        <li><a href="#">Profile</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Login / Start Screen -->
+  <div class="container" id="login-container">
+    <h2>Enter Your Name</h2>
+    <input type="text" id="username" placeholder="Your Name">
+    <button onclick="startQuiz()">Start Quiz</button>
+  </div>
+
+  <!-- Quiz Screen -->
+  <div class="container" id="quiz-container" style="display:none;">
+    <h2 id="welcome"></h2>
+    <h3 id="question"></h3>
+    <div id="options"></div>
+    <div class="score-board">
+      <p>✅ Score: <span id="score">0</span></p>
+      <p>❌ Wrong Answers: <span id="wrong">0</span></p>
+    </div>
+  </div>
+
+  <!-- Result Screen -->
+  <div class="container" id="result-container" style="display:none;">
+    <h2>🎉 Quiz Over!</h2>
+    <p id="final-score"></p>
+    <button onclick="location.reload()">Restart</button>
+  </div>
+
+  <script src="./Quiz-app.js"></script>
+</body>
+</html>

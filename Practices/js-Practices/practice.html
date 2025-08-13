@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Name:</label>
+        <input type="text" placeholder="enter your name" id="name-input" required>
+        <label>Phone number</label>
+        <input type="number" placeholder="enter your phoneno" class="phoneno-input" required>
+        <button onclick="print()">submit</button>
+        <div id="result"></div>
+        </form>
+</body>
+<script>
+    function print(){
+        let value=document.querySelector('name-input');
+        let inputElement=document.querySelector('phoneno-input');
+        let buttonElement=document.querySelector('button');
+        let divElement=document.querySelector('result');
+        if(inputElement<10){
+           divElement.inn=`<p>your form submitted</p>`;
+        }
+        else{
+            divElement.innerHTML=`<p>not submitted</p>`;
+        }
+    }
+</script>
+</html>

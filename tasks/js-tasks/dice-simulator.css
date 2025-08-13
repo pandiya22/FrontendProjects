@@ -1,0 +1,40 @@
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+div{
+    margin:100px auto;
+    border:none;
+    width:500px;
+    height:500px;
+
+}
+div p{
+    margin-top:20px;
+    font-size: 200px;
+    text-align: center;
+    
+    
+}
+div h1{
+    margin-top:20px;
+    text-align: center;
+}
+button{
+    width:120px;
+    height:50px;
+    background-color: lightseagreen;
+    border:none;
+    border-radius: 8px;
+    color:white;
+    font-weight:bold;
+    margin-top:0;
+    position: absolute;
+    top:450px;
+    left:710px;
+    
+}
+
+
+    

@@ -3,6 +3,11 @@
       text-align: center;
       padding-top: 60px;
       background: #fff;
+      background-image: url(https://t4.ftcdn.net/jpg/12/08/68/55/240_F_1208685509_KvFzyVZ9xhTbWqODCqZxnQ2Ji6DhjbLZ.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
     }
 
     h1 {
@@ -14,9 +19,11 @@
       padding: 10px;
       font-size: 1rem;
       width: 250px;
+      max-width: 90%;
       border-radius: 5px;
       border: 1px solid #ccc;
       margin-top: 15px;
+      
     }
 
     button {
@@ -31,14 +38,23 @@
     }
 
     #result {
-      margin-top: 30px;
+      margin: 30px auto;
       padding: 20px;
+      width: 300px;
+      height: auto;
       border: 1px solid #ddd;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      text-align: center;
       background: #f9f9f9;
-      width:200px;
-      height:200px;
-      margin-left: 400px;
+      background-color: aquamarine;
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+
+    p {
+      margin: 8px 0;
+      font-size: 1rem;
     }
