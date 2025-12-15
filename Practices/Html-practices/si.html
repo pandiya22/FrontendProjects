@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Fighting Game</title>
+    <style>
+        body {
+            background: #111;
+            color: white;
+            margin: 0;
+            overflow: hidden;
+            font-family: sans-serif;
+        }
+        .hud {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        .player-health {
+            background: red;
+            height: 20px;
+            width: 300px;
+            border: 2px solid white;
+        }
+        .timer {
+            font-size: 2rem;
+        }
+        .hidden {
+            display: none;
+        }
+        #winnerMessage {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            background: rgba(0,0,0,0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        #restartBtn {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            background: orange;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #restartBtn:hover {
+            background: darkorange;
+        }
+    </style>
+</head>
+<body>
+    <div class="hud">
+        <div class="player-health" id="player1Health"></div>
+        <div class="timer" id="timer">60</div>
+        <div class="player-health" id="player2Health"></div>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <div id="winnerMessage" class="hidden"></div>
+    <button id="restartBtn" class="hidden">Restart Game</button>
+
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = 1024;
+        canvas.height = 576;
+
+        let player1, player2, keys, timer, timerId;
+
+        function initGame() {
+            player1 = { name: "player1", x: 100, y: 450, width: 50, height: 150, color: 'blue', health: 100, attacking: false };
+            player2 = { name: "player2", x: 874, y: 450, width: 50, height: 150, color: 'red', health: 100, attacking: false };
+            keys = {};
+            timer = 60;
+            document.getElementById('player1Health').style.width = player1.health * 3 + 'px';
+            document.getElementById('player2Health').style.width = player2.health * 3 + 'px';
+            document.getElementById('timer').textContent = timer;
+            document.getElementById('winnerMessage').classList.add('hidden');
+            document.getElementById('restartBtn').classList.add('hidden');
+        }
+
+        function drawFighter(player) {
+            // Draw fighter
+            ctx.fillStyle = player.color;
+            ctx.fillRect(player.x, player.y, player.width, player.height);
+
+            // Draw name above fighter
+            ctx.fillStyle = "white";
+            ctx.font = "20px Arial";
+            ctx.textAlign = "center";
+            ctx.fillText(player.name, player.x + player.width / 2, player.y - 10);
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawFighter(player1);
+            drawFighter(player2);
+
+            if (keys['a']) player1.x -= 5;
+            if (keys['d']) player1.x += 5;
+            if (keys['ArrowLeft']) player2.x -= 5;
+            if (keys['ArrowRight']) player2.x += 5;
+
+            if (player1.attacking && player1.x + player1.width >= player2.x && player1.x <= player2.x + player2.width) {
+                player2.health = Math.max(0, player2.health - 1);
+                document.getElementById('player2Health').style.width = player2.health * 3 + 'px';
+            }
+
+            if (player2.attacking && player2.x + player2.width >= player1.x && player2.x <= player1.x + player1.width) {
+                player1.health = Math.max(0, player1.health - 1);
+                document.getElementById('player1Health').style.width = player1.health * 3 + 'px';
+            }
+
+            if (player1.health <= 0 || player2.health <= 0) {
+                endGame();
+                return;
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        function endGame() {
+            clearTimeout(timerId);
+            document.getElementById('winnerMessage').classList.remove('hidden');
+            document.getElementById('restartBtn').classList.remove('hidden');
+
+            if (player1.health > player2.health) {
+                document.getElementById('winnerMessage').textContent = ${player1.name} Wins!;
+            } else if (player2.health > player1.health) {
+                document.getElementById('winnerMessage').textContent = ${player2.name} Wins!;
+            } else {
+                document.getElementById('winnerMessage').textContent = 'Draw!';
+            }
+        }
+
+        function decreaseTimer() {
+            if (timer > 0) {
+                timerId = setTimeout(decreaseTimer, 1000);
+                timer--;
+                document.getElementById('timer').textContent = timer;
+            } else {
+                endGame();
+            }
+        }
+
+        window.addEventListener('keydown', (e) => {
+            keys[e.key] = true;
+            if (e.key === ' ') player1.attacking = true;
+            if (e.key === 'Enter') player2.attacking = true;
+        });
+
+        window.addEventListener('keyup', (e) => {
+            keys[e.key] = false;
+            if (e.key === ' ') player1.attacking = false;
+            if (e.key === 'Enter') player2.attacking = false;
+        });
+
+        document.getElementById('restartBtn').addEventListener('click', restartGame);
+
+        function restartGame() {
+            initGame();
+            decreaseTimer();
+            animate();
+        }
+
+        initGame();
+        decreaseTimer();
+        animate();
+    </script>
+</body>
+</html>
+
+to change the player name

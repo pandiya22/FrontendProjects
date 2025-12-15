@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(249, 176, 150);
+    }
+    button{
+        background-color: rgb(233, 233, 126);
+        border: none;
+        width:60px;
+        border-radius: 2%;
+        
+    }
+    .container{
+        margin-left:280px;
+        margin-top: 200px;
+        background-color: rgb(206, 253, 254);
+        border:  blue dotted;
+        padding-left:150px;
+        width:500px;
+
+    }
+    h1{
+        color:blueviolet;
+    }
+    h2{
+        color:red;
+    }
+    h3{
+        color:brown;
+    }
+</style>
+<body>
+    <div class="container">
+   <h1>GUESS THE NUMBER</h1>
+<input id="Guessnumber"  placeholder="Enter a number">
+<button onclick="checknumber()">Check</button>
+<h2 id="result">You are Right or Wrong</h2>
+<h3 id="score">Score:10</h3>
+    </div> 
+</body>
+<script>
+    var Guessnumber=document.getElementById("Guessnumber")
+    var result=document.getElementById("result")
+    var score=document.getElementById("score")
+    var randomnumber=Math.floor(Math.random()*10)+1
+    var totalscore=10
+    function checknumber(){
+         var ans=Guessnumber.value 
+         if(ans==randomnumber){
+            result.textContent="You Are Right"
+            alert("You Won the Game")
+         }  
+         else{
+            result.textContent="You Are Wrong"
+            totalscore=totalscore-1;
+            score.textContent="Score:" + totalscore
+         }
+    }
+
+
+</script>
+</html>
